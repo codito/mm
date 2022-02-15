@@ -4,6 +4,11 @@ A tiny command line companion to [Money Manager Ex][mmex]. It serves one purpose
 for now - automate assignment of non-reconciled transactions given a set of
 rules.
 
+E.g., create a rule to automatically assign a transaction to `Payee: Amazon` if
+the `Notes` field contains certain regex. Also update the `Category` and `Sub
+Category` for this transaction. A sample config is available in
+[docs/sample.yml](./docs/sample.yml).
+
 [mmex]: https://github.com/moneymanagerex/moneymanagerex
 
 ## Usage
