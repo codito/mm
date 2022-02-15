@@ -1,0 +1,14 @@
+# Sample rules file
+database_path: "/tmp/mmex.db"   # Encrypted databases supported. Tool will ask you for password.
+database_password: secret       # Optional. Used only if encrypted databases are used.
+assignments:
+  - account: "ICICI XXXX5007"   # We'll look for non-reconciled transactions in this account.
+    rules:
+      - condition:              # All values are case-insensitive. Duplicate this block to create more rules.
+          notes: (AMZN|AMAZON)  # Regex to match the Notes field for a transaction
+        update:                 # For each matching transaction, these fields will be updated.
+          payee: Amazon         # Payee will be created if doesn't exist already
+          category: Household
+          sub_category: Grocery
+      # more rules follow.
+  # more accounts follow.
