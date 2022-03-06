@@ -13,7 +13,10 @@ public class ConfigOption : Option<Configuration>, ICommandOption
     public ConfigOption()
         : base(
             new[] { "-c", "--config" },
-            parseArgument: (result) => result.Tokens.Count > 1 ? Parse(result.Tokens[result.Tokens.Count - 1].Value) : new Configuration(),
+            parseArgument: (result) =>
+            {
+                return result.Tokens.Count > 0 ? Parse(result.Tokens[result.Tokens.Count - 1].Value) : new Configuration();
+            },
             isDefault: true,
             "Path to a configuration file with assignment rules.")
     {
