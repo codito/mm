@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="jab" Version="0.8.2" privateassets="all" />
+    <PackageReference Include="jab" Version="0.8.6" privateassets="all" />
     <PackageReference Include="Spectre.Console" Version="0.44.0" />
     <PackageReference Include="sqlite-net-static" Version="1.8.116" />
     <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
